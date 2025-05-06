@@ -13,6 +13,10 @@ export const betterAuthClient = betterAuth({
   },
   session: {
     modelName: "Session",
+    cookieCache: {
+      enabled: true,
+      maxAge: 5 * 60,
+    }
   },
   account: {
     modelName: "Account",

@@ -3,6 +3,7 @@ import { Hono } from 'hono'
 import { authenticationsRoutes } from './routes/authentications'
 import { cors } from 'hono/cors';
 import { webClientURL } from './utils/environment';
+import { postsRoute } from './routes/posts';
 const allRoutes = new Hono();
 
 allRoutes.use(
@@ -17,6 +18,7 @@ allRoutes.use(
 );
 
 allRoutes.route("/authentications", authenticationsRoutes)
+allRoutes.route("/posts", postsRoute)
 
 serve(allRoutes, (info) => {
   console.log(`Server is running on http://localhost:${info.port}`)
