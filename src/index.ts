@@ -1,6 +1,6 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
-import { authenticationsRoutes } from './routes/authentication'
+import { authenticationsRoutes } from './routes/authentications'
 import { cors } from 'hono/cors';
 import { webClientURL } from './utils/environment';
 const allRoutes = new Hono();
